@@ -13,7 +13,12 @@ export class ProductsController {
         @Body('description') productDescription: string,
         @Body('price') productPrice: number,
     ) {
-        const generatedId = this.productsService.insertProduct(productTitle, productDescription, productPrice);
+        const generatedId = this.productsService.insertProduct(
+            productTitle, 
+            productDescription, 
+            productPrice
+        );
+        
         return {id: generatedId};
     }
 }
