@@ -10,5 +10,6 @@ export class ProductsService {
 
         const newProduct = new Product(id, title, description, price);
         this.products.push(newProduct);
+        return id;
     }
 }
