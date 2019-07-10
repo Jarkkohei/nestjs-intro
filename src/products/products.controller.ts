@@ -21,4 +21,9 @@ export class ProductsController {
 
         return {id: generatedId};
     }
+
+    @Get()
+    getAllProducts() {
+        return this.productsService.getProducts();
+    }
 }
