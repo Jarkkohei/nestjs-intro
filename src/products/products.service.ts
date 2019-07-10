@@ -6,7 +6,7 @@ export class ProductsService {
     private products: Product[] = [];
 
     insertProduct(title: string, description: string, price: number) {
-        const id = new Date().toString();
+        const id = Math.random().toString();
 
         const newProduct = new Product(id, title, description, price);
         this.products.push(newProduct);
