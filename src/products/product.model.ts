@@ -1,5 +1,6 @@
 export class Product {
 
+    /*
     id: string;
     title: string;
     description: string;
@@ -11,4 +12,13 @@ export class Product {
         this.description = description;
         this.price = price;
     }
+    */
+
+    // An alternative way to populate class properties.
+    constructor(
+        public id: string, 
+        public title: string, 
+        public description: string, 
+        public price: number
+    ) {}
 }
