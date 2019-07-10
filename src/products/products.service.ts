@@ -12,4 +12,8 @@ export class ProductsService {
         this.products.push(newProduct);
         return id;
     }
+
+    getProducts() {
+        return [...this.products];
+    }
 }
