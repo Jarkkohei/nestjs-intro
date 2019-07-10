@@ -1,5 +1,5 @@
 import { Controller, Post, Body } from '@nestjs/common';
-import { ProductsService } from 'dist/products/products.service';
+import { ProductsService } from './products.service';
 
 @Controller('products')
 export class ProductsController {
@@ -18,7 +18,7 @@ export class ProductsController {
             productDescription, 
             productPrice
         );
-        
+
         return {id: generatedId};
     }
 }
