@@ -1,6 +1,6 @@
 ## nestjs-intro
 
-Youtube Channel - Academind - Learn Nest.js from Scratch by building an API -course project
+Basic CRUD example for products from Youtube Channel - Academind - Learn Nest.js from Scratch by building an API -course
 
 ## Install
 
