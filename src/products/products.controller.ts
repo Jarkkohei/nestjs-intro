@@ -8,6 +8,7 @@ export class ProductsController {
 
     @Post()
     addProduct(
+        //@Body() completeBody: { title: string, description: string, price: string },
         @Body('title') productTitle: string,
         @Body('description') productDescription: string,
         @Body('price') productPrice: number,
