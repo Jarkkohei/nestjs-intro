@@ -53,14 +53,18 @@ export class ProductsService {
         this.products.splice(index, 1);
     }
 
-    private findProduct(productId: string): [Product, number] {
-        const productIndex = this.products.findIndex((prod) => prod.id === productId);
-        const product = this.products[productIndex];
+    private async findProduct(productId: string): Promise<Product> {
+        const product = await this.productModel.findById(productId);
 
         if(!product) {
             throw new NotFoundException('Could not find product.');
         }
 
-        return [product, productIndex];
+        return {
+            id: product.id, 
+            title: product.title, 
+            description: product.description, 
+            price: product.price
+        };
     }
 }
