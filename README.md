@@ -14,6 +14,8 @@ Login to [MongoDB Cloud Atlas](https://www.mongodb.com/cloud/atlas).
 
 Create a new MongoDB Cloud Atlas project and connect into it to get the connection string.
 
+Whitelist your IP address.
+
 Create `config/keys.ts` folder and file to the `src/config` folder of your Nest.js -project.
 
 Copy and paste the connection string as a `MONGODB_CONNECTION_STRING` into your Nest.js projects `src/config/keys.ts` -file.
