@@ -18,8 +18,10 @@ export class ProductsService {
         return result.id as string;
     }
 
-    getProducts() {
-        return [...this.products];
+    async getProducts() {
+        //exec() forces to return a Promise
+        const products = await this.productModel.find().exec();
+        return products as Product[];
     }
 
     getSingleProduct(productId: string) {
