@@ -52,9 +52,14 @@ export class ProductsService {
         updatedProduct.save();
     }
 
-    deleteProduct(productId: string) {
-        const [_, index] = this.findProduct(productId);
-        this.products.splice(index, 1);
+    async deleteProduct(productId: string) {
+        //exec() forces to return a Promise
+        //_id is used because the MongoDB uses it for id.
+        const result = await this.productModel.deleteOne({_id: productId}).exec();
+        if(result.n === 0) {
+            throw new NotFoundException('Could not find product.');
+        }
+
     }
 
     private async findProduct(productId: string): Promise<Product> {
