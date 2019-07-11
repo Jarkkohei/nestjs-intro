@@ -26,7 +26,12 @@ export class ProductsService {
 
     async getSingleProduct(productId: string) {
         const product = await this.findProduct(productId);
-        return product;
+        return { 
+            id: product.id, 
+            title: product.title, 
+            description: product.description, 
+            price: product.price
+        };
     }
 
     updateProduct(productId: string, title: string, description: string, price: number) {
