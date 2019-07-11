@@ -20,13 +20,13 @@ Create `config/keys.ts` folder and file to the `src/config` folder of your Nest.
 
 Copy and paste the connection string as a `MONGODB_CONNECTION_STRING` into your Nest.js projects `src/config/keys.ts` -file.
 
-Replace the `<username>` and `<password>` -part of the ``ONGODB_CONNECTION_STRING` with the MongoDB Cloud Atlas project connection username and password.
+Replace the `<username>` and `<password>` -part of the `MONGODB_CONNECTION_STRING` with the MongoDB Cloud Atlas project connection username and password.
 
 You can also replace the text `test` in your `MONGO_CONNECTION_KEY` with the database name of your choice. It will be created if it does not already exist.
 
 ```typescript
 export default {
-    MONGODB_CONNECTION_KEY: '<YourMongoDBCloudAtlasConnectionStringHere>'
+    MONGODB_CONNECTION_STRING: '<YourMongoDBCloudAtlasConnectionStringHere>'
 }
 ```
 Just remember to add the `config/keys.ts` to your `.gitignore` -file if you're using Git.
