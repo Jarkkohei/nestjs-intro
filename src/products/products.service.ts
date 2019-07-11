@@ -71,11 +71,6 @@ export class ProductsService {
             throw new NotFoundException('Could not find product.');
         }
 
-        return {
-            id: product.id, 
-            title: product.title, 
-            description: product.description, 
-            price: product.price
-        };
+        return product;
     }
 }
