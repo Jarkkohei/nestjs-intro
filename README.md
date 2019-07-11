@@ -20,6 +20,8 @@ Copy and paste the connection string as a `MONGODB_CONNECTION_STRING` into your 
 
 Replace the `<username>` and `<password>` -part of the ``ONGODB_CONNECTION_STRING` with the MongoDB Cloud Atlas project connection username and password.
 
+You can also replace the text `test` in your `MONGO_CONNECTION_KEY` with the database name of your choice. It will be created if it does not already exist.
+
 ```typescript
 export default {
     MONGODB_CONNECTION_KEY: '<YourMongoDBCloudAtlasConnectionStringHere>'
