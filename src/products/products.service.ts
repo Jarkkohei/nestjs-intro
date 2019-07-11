@@ -61,7 +61,8 @@ export class ProductsService {
         let product;
             
         try {
-            product = await this.productModel.findById(productId);
+            //exec() forces to return a Promise
+            product = await this.productModel.findById(productId).exec();
         } catch(err) {
             throw new NotFoundException('Could not find product.');
         }
