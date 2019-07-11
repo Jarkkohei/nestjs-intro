@@ -34,9 +34,8 @@ export class ProductsService {
         };
     }
 
-    updateProduct(productId: string, title: string, description: string, price: number) {
-        const [product, index] = this.findProduct(productId);
-        const updatedProduct = { ...product };
+    async updateProduct(productId: string, title: string, description: string, price: number) {
+        const updatedProduct = await this.findProduct(productId);
 
         if (title) {
             updatedProduct.title = title;
@@ -50,7 +49,7 @@ export class ProductsService {
             updatedProduct.price = price;
         }
 
-        this.products[index] = updatedProduct;
+        updatedProduct.save();
     }
 
     deleteProduct(productId: string) {
