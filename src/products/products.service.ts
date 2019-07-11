@@ -24,9 +24,9 @@ export class ProductsService {
         return products.map((prod) => ({id: prod.id, title: prod.title, description: prod.description, price: prod.price}));
     }
 
-    getSingleProduct(productId: string) {
-        const product = this.findProduct(productId)[0];
-        return {...product};
+    async getSingleProduct(productId: string) {
+        const product = await this.findProduct(productId);
+        return product;
     }
 
     updateProduct(productId: string, title: string, description: string, price: number) {

@@ -29,10 +29,16 @@ export class ProductsController {
     }
 
     @Get(':id')
-    getProduct(
+    async getProduct(
         @Param('id') productId: string
     ) {
-        return this.productsService.getSingleProduct(productId);
+        const product = await this.productsService.getSingleProduct(productId);
+        return {
+            id: product.id, 
+            title: product.title, 
+            description: product.description, 
+            price: product.price
+        };
     }
 
     @Patch(':id')
