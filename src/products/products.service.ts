@@ -59,7 +59,6 @@ export class ProductsService {
         if(result.n === 0) {
             throw new NotFoundException('Could not find product.');
         }
-
     }
 
     private async findProduct(productId: string): Promise<Product> {
