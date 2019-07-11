@@ -33,6 +33,9 @@ lerna-debug.log*
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Cofig keys
+/src/config
+
 
 # Created by https://www.gitignore.io/api/git,node,windows,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=git,node,windows,visualstudiocode
